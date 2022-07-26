@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: rgb(83, 83, 83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(7, 10%);
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+.container > a {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+    text-shadow: 0 0 2px black;
+    overflow: hidden;
+}
+.hide {
+    font-size: .7rem;
+    display: none;
+}
+.container > a:hover > .hide {
+    display: flex;
+}
+.container > a:hover {
+    transform: scale(1.7);
+    transition-duration: 300ms;
+}
+@media all and (max-width: 720px) {
+    .container {
+        width: 70%;
+        grid-template: repeat(7, 10%) / 1fr;
+    }
+    .container > a {
+        height: 100%;
+    }
+    .container > a:hover {
+        transform: scale(1.3);
+        transition-duration: 300ms;
+    }
+    .hide {
+        font-size: .9rem;
+        display: flex;
+    }
+}
